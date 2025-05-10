@@ -10,12 +10,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      - name: Fix npm permissions
-        run: sudo chown -R $USER:$(id -gn $USER) ~/.npm
-
-      - name: Install Python
-        run: sudo apt-get install -y python3
       
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -29,7 +23,7 @@ jobs:
         run: npm run build
 
       - name: Deploy Hosting
-        uses: w9jds/firebase-action@v1.5.0
+        uses: w9jds/firebase-action@v13.4.0
         with:
           args: deploy --only hosting
         env:
