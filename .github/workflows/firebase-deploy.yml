@@ -23,9 +23,8 @@ jobs:
         run: npm run build
 
       - name: Deploy Hosting
-        uses: firebase-tools/action-hosting-deploy@latest
+        uses: w9jds/firebase-action@v1.5.0
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_TOKEN }}
-          channelId: live
-          projectId: lifedev-avaliacaomiriam
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
