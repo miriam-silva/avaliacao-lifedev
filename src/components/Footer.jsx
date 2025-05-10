@@ -1,16 +1,16 @@
-import React from 'react'
 import styles from './Footer.module.css'
+import logo from "./../../public/logoDevBlog-H.png"
 
 const Footer = () => {
   return (
     <>
     <footer className={styles.footer}>
-        <h3>Plataforma de Postagens para Desenvolvedores</h3>
-        <p>Compartilhamento de experiências de Nomade Life Dev</p>
-        <p> Icoma Education&#174; 2025&#169;</p>
+        <h3>Escreva sobre o que você tem interesse!</h3>
+        <p>Fatec Dev Team &copy; 2025</p>
+        <img src={logo} alt="Logo do Developer Mini Blog" />
     </footer>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

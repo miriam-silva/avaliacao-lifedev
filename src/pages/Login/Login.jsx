@@ -34,7 +34,7 @@ const Login = () => {
     return (
         <div className={styles.login}>
             <h1>Entrar</h1>
-            <p>Faça login em nossa plataforma de desenvolvedores</p>
+            <p>Faça login para poder utilizar o sistema</p>
             <form onSubmit={handlerSubmit}>
                 <label>
                     <span>E-mail: </span>
